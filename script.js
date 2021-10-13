@@ -1,7 +1,7 @@
 
 kepadatoktomb.forEach((tombelem, szamolo) => {
 
-    $("#keptarvalaszto").append(` <div class="thumbnail" data-szamozo= "${szamolo}" >     <img class="kiskep"   src="${tombelem.photo}" alt=""> </div>  `)
+    $("#keptarvalaszto").append(` <div class="thumbnail" data-szamozo="${szamolo}" >     <img class="kiskep"   src="${tombelem.photo}" alt=""> </div>  `)
 
     let modwidth=90
     $(".kiskep").width(modwidth)
@@ -14,41 +14,13 @@ kepadatoktomb.forEach((tombelem, szamolo) => {
     
     betoltofg (melyikreKattintott)
     
+//     ($(".clicked").text(kepadatoktomb[index].title)
     console.log($(".clicked").text(kepadatoktomb[index].title)
     )
     }
     )
     }
     )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -145,7 +117,14 @@ $(".jobbra").click(() => {
         index = 0
     }
 
-    betoltofg(index)
+betoltofg(index)
+$(".clicked").text(kepadatoktomb[index].title)
+
+
+
+
+//.................................Ezt a néhány sort tettem be...................................//
+// $('.thumbnail[data-szamozo="k"]').css("box-shadow", "0 0 0 20px blue")
 }
 )
 
@@ -159,8 +138,9 @@ $(".balra").click(() => {
     if (index < 0) {
         index = kepadatoktomb.length-1
     }
-    
+
     betoltofg(index)
+    $(".clicked").text(kepadatoktomb[index].title)
 }
 )
     
